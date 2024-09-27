@@ -1,0 +1,4 @@
+  <h1><%=@doctor.name%></h1> 
+  <ul>
+    <li><%= link_to "Destroy", doctor_path(@doctor), data:{ turbo_method: :delete, turbo_confirm: :"Are you sure"}%></li>
+  </ul> 

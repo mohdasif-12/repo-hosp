@@ -1,0 +1,7 @@
+<h1><%= @patient.name %></h1> 
+<h2>Age: <%= @patient.age %></h2>
+
+<ul>
+  <li><%= link_to "Edit Patient", edit_patient_path(@patient) %></li>
+   <li><%= link_to "Destroy", patient_path(@patient), data:{ turbo_method: :delete, turbo_confirm: :"Are you sure"}%></li>
+</ul>

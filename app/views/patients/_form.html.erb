@@ -1,0 +1,15 @@
+<%= form_with(model: @patient, local:true) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :age %>
+    <%= form.number_field :age, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Add Patient" %>
+  </div>
+<% end %>

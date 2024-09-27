@@ -1,0 +1,30 @@
+<%= form_with(model: @appointment, local: true) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name%>
+  </div>
+
+  <div>
+    <%= form.label :phone_number%>
+    <%= form.text_field :phone_number %>
+  </div>
+
+  <div>
+    <%= form.label :time %>
+    <%= form.datetime_select :time %>
+  </div>
+<div class="field">
+  <%= form.label :patient_id, "Patient" %>
+  <%= form.collection_select :patient_id, Patient.all, :id, :name, { prompt: 'Select a Patient' } %>
+</div>
+
+<div class="field">
+  <%= form.label :doctor_id, "Doctor" %>
+  <%= form.collection_select :doctor_id, Doctor.all, :id, :name, { prompt: 'Select a Doctor' } %>
+</div>
+
+   
+  <div>
+    <%= form.submit "Create Appointment" %>
+  </div>
+<% end %>

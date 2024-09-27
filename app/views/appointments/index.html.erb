@@ -1,0 +1,21 @@
+<h1>Appointments</h1>
+
+<ul>
+  <% @appointments.each do |appointment| %>
+    <li>
+    <%=appointment.name%>
+    </li>
+    <li>
+    <%=appointment.phone_number%>
+    </li>
+    <li>
+    <%=appointment.time%>
+    </li>
+    <li>
+    <%=appointment.doctor_id%>
+    </li>
+    <li>
+    <%=appointment.patient_id%>
+    </li>
+  <% end %>
+</ul>

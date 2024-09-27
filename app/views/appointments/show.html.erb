@@ -1,0 +1,10 @@
+<h1><%=@appointment.name%></h1> 
+<h1><%=@appointment.phone_number%></h1> 
+<h1><%=@appointment.time%></h1>
+<h1><%=@appointment.doctor_id%></h1>
+<h1><%=@appointment.patient_id%></h1>
+
+  <ul>
+    <li><%= link_to "Edit", edit_appointment_path(@appointment) %></li>
+    <li><%= link_to "Destroy", appointment_path(@appointment), data:{ turbo_method: :delete, turbo_confirm: :"Are you sure"}%></li>
+  </ul> 
